@@ -50,19 +50,28 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 ## SQL Statements
 
 1. INSERT two users:
+   12:21:30	INSERT INTO users (first_name, last_name) VALUES ('test', 'user'), ('test2', 'user')	2 row(s) affected Records: 2  Duplicates: 0  Warnings: 0	0.039 sec
+
+
 
 
 2. UPDATE all Ohio addresses to "REDACTED":
+   12:27:50	UPDATE usersAddress SET address = 'REDACTED' WHERE state = 'OH'	0 row(s) affected Rows matched: 22  Changed: 0  Warnings: 0	0.039 sec
+
 
 3. All three DELETES
 
 * DELETE from usersContact
+  12:31:04	SELECT * FROM usersContact LIMIT 0, 1000	499 row(s) returned	0.040 sec / 0.00037 sec
 
 
 * DELETE from usersAddress
+  12:32:07	SELECT * FROM usersAddress LIMIT 0, 1000	499 row(s) returned	0.040 sec / 0.0090 sec
 
 
 * DELETE from users
+  12:33:02	DELETE FROM users WHERE id = 114	1 row(s) affected	0.039 sec
+
 
 
 ## Summary
