@@ -62,11 +62,14 @@ Let's delete the appropriate information from `usersContact`, `usersAddress` and
 3. All three DELETES
 
 * DELETE from usersContact
-  12:31:04	SELECT * FROM usersContact LIMIT 0, 1000	499 row(s) returned	0.040 sec / 0.00037 sec
+  12:30:12	DELETE FROM usersContact WHERE user_id = 114	1 row(s) affected	0.049 sec
+
+
 
 
 * DELETE from usersAddress
-  12:32:07	SELECT * FROM usersAddress LIMIT 0, 1000	499 row(s) returned	0.040 sec / 0.0090 sec
+  12:32:07	DELETE FROM usersAddress WHERE user_id = 114	1 row(s) affected	0.049 sec
+
 
 
 * DELETE from users
